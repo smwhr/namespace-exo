@@ -1,5 +1,5 @@
 <?php
-require_once("../utils/init.php");
+require_once("../vendor/autoload.php");
 
 use \Controller\ErrorController;
 

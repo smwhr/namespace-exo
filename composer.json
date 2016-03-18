@@ -1,0 +1,15 @@
+{
+  "name": "supinternet/suplam",
+  "require": {
+    "php"                   : ">=5.5"
+  },
+  "autoload": {
+      "psr-0": { 
+        "Controller": "./", 
+        "Model": "./",
+        "MatchMe": "./",
+        "MeetMe":"./",
+        "Twitter": "./vendor/twitter/src"
+      }
+  }
+}
