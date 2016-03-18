@@ -17,7 +17,8 @@ class IndexController{
   }
 
   public function tweetAction(){ // /index/tweet
-    $u = new \Twitter\User();
+    $a = new \Twitter\Manager\Auth();
+    $u = $a->getUser();
     $t = $u->getTimeline();
     var_dump($t);// DOIT RENVOYER UN OBJET Twitter\Timeline
   }
