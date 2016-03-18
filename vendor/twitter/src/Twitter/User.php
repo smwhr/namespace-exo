@@ -7,5 +7,10 @@ class User{
       $t = new Timeline();
       return $t;
    }
+
+   public function postTweet($text){
+    throw new \Exception("User is not connected");
+    //DO STUFF
+   }
   
 }

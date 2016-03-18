@@ -1,6 +1,8 @@
 <?php
 require_once("../utils/init.php");
 
+use \Controller\ErrorController;
+
 $called_url = $_SERVER['REQUEST_URI'];
 $url_composants = explode("/",$called_url,4);
 
@@ -27,12 +29,12 @@ global $pdo;
 try{
   $controller = new $class_name($pdo);
 }catch(Exception $e){
-  $controller = new \Controller\ErrorController($pdo);
+  $controller = new ErrorController($pdo);
 }
 
 $action = strtolower($action_name)."Action";
 if(!method_exists($controller,$action)){
-  $controller = new \Controller\ErrorController($pdo);
+  $controller = new ErrorController($pdo);
   $action = "e404";
 }
 

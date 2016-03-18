@@ -1,8 +1,9 @@
 <?php
-namespace \Twitter\Manager;
+namespace Twitter\Manager;
+use Twitter\User;
 
 class Auth{
   public function getUser(){
-    return ????
+    return new User();
   }
 }

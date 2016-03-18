@@ -22,5 +22,10 @@ class IndexController{
     $t = $u->getTimeline();
     var_dump($t);// DOIT RENVOYER UN OBJET Twitter\Timeline
   }
+  public function posttweetAction(){
+    $a = new \Twitter\Manager\Auth();
+    $u = $a->getUser();
+    $u->postTweet("mon text");
+  }
 
 }
